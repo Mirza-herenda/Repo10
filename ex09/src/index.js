@@ -1,25 +1,20 @@
-var object=
-{
-    title:"Titanic",
-    song :"My Heart will go On",
-    genre:"drama",
-    
-    
+var myObj = {
+    title: "Titanic",
+    song: "My Heart Will Go On",
+    genre: "Drama"
+
 }
 
+function myFunction(myObj, checkProp) {
+    if(myObj.hasOwnProperty(checkProp)){
+        return myObj[checkProp];
+    }
 
-function myFunction(myObj, checkProp)
- {
-   
-    if(myObj.hasOwnProperty(checkProp))
-    {
-    return myObj[checkProp];
-    }
-    return "not found";
-    
-    }
-    console.log(myFunction(object,"title"));
-    console.log(myFunction(object,"song"));
-    console.log(myFunction(object,"genre"));
-    console.log(myFunction(object,"actor"));
-    module.exports = myFunction;
+    return "Not found";
+}
+
+console.log(myFunction(myObj,"title"));
+console.log(myFunction(myObj,"song"));
+console.log(myFunction(myObj,"genre"));
+console.log(myFunction(myObj,"actor"));
+module.exports = myFunction;

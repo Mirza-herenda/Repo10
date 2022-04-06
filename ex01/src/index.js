@@ -1,15 +1,14 @@
-
-var myPet=
-{
-    species:"bulldog",
-    name:"mrvica",
-    legs:4,
-    friends:["pahuljica","putin"]
+var myPet = {
+    species: "Bulldog",
+    name: "mrvica",
+    legs: 4,
+    friends: ["Zelinski", "Putin"]
 }
-function myFunction(myObj) 
-{
-return myObj;    
+
+function myFunction(myObj) {
+    return myObj;
 }
 
 console.log(myFunction(myPet));
-module.exports={myPet,myFunction};
+
+module.exports = { myPet, myFunction };

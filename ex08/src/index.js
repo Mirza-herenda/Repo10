@@ -1,19 +1,20 @@
 function myObject() {
     'use strict';
-    const MATH_CONSTANTS = 
-    {
-    E: 2.71828
+    const MATH_CONSTANTS = {
+        E: 2.71828
     };
-    // Only change code below this line
-        Object.freeze(MATH_CONSTANTS);
-    // Only change code above this line
+
+    Object.freeze(MATH_CONSTANTS);
+
     try {
-    MATH_CONSTANTS.E = 23;
-    } catch(error) {
-    console.log(error.message);
+        MATH_CONSTANTS.E = 23;
+    } catch (error) {
+        console.log(error.message);
     }
     return MATH_CONSTANTS.E;
-    }
-    const E = myObject();
-    console.log(myObject(E));
-    module.exports = myObject;
+}
+
+const E = myObject();
+console.log(myObject(E));
+
+module.exports = myObject;
